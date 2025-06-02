@@ -20,6 +20,17 @@ https://github.com/user-attachments/assets/8c208975-32b5-4d1a-ab94-a5236de1c091
    
 </div>
 
+# Installation Process:
+              git clone <github link>
+              cd ____
+
+              pip install -r requirements.txt
+
+              // you can directly run the script or see the Usage.
+              // Directly run the tool,
+
+                 python grabber.py
+
 
 # Usage:
 
