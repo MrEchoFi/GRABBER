@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # GRABBER: Forensic IP & Username Tracer
 # Author: Mr.EchoFi
 # Version: 1.0 (Red Team Edition)
@@ -14,12 +13,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from phonenumbers import carrier, geocoder, timezone
 from sys import stderr
 
-# === CONFIGURATION ===
+
 SOCIAL_MEDIA_FILE = "social_media_sites.json"
 LOG_FILE = "GRABBER.log"
 MAX_THREADS = 20
 
-# === COLORS ===
+
 Bl = '\033[30m'
 Re = '\033[1;31m'
 Gr = '\033[1;32m'
@@ -29,14 +28,14 @@ Mage = '\033[1;35m'
 Cy = '\033[1;36m'
 Wh = '\033[1;37m'
 
-# === LOGGING ===
+
 logging.basicConfig(
     filename=LOG_FILE,
     level=logging.INFO,
     format='%(asctime)s %(levelname)s: %(message)s'
 )
 
-# === LEGAL DISCLAIMER ===
+
 DISCLAIMER = f"""{Re}
 [!] WARNING: This tool is for authorized forensic and red team use only.
 Unauthorized use against systems or accounts you do not own or have explicit permission to test is illegal.
@@ -44,7 +43,7 @@ The author is not responsible for misuse or damage.
 {Wh}
 """
 
-# === UTILS ===
+
 
 def clear():
     if os.name == 'nt':
@@ -54,7 +53,7 @@ def clear():
 
 def validate_ip(ip):
     import re
-    # Simple IPv4/IPv6 regex
+   
     ipv4 = r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$"
     ipv6 = r"^([0-9a-fA-F]{0,4}:){1,7}[0-9a-fA-F]{0,4}$"
     return re.match(ipv4, ip) or re.match(ipv6, ip)
@@ -63,7 +62,7 @@ def validate_username(username):
     return username and username.isalnum() and 2 <= len(username) <= 32
 
 def load_social_media_sites():
-    # Load from JSON file for easy updates
+   
     default_sites = [
         {"url": "https://www.facebook.com/{}", "name": "Facebook"},
          {"url": "https://www.google.com/{}", "name": "Google"},
@@ -195,7 +194,7 @@ def export_results(data, filename, fmt="json"):
         logging.error(f"Export failed: {e}")
 
 def use_proxy():
-    # Example: Use Tor if available
+   
     if os.environ.get("USE_TOR", "0") == "1":
         proxies = {
             "http": "socks5h://127.0.0.1:9050",
@@ -216,7 +215,7 @@ def print_banner():
     """)
     print(DISCLAIMER)
 
-# === CORE FUNCTIONS ===
+
 
 def iptrack(ip, export=None, fmt="json"):
     print_banner()
@@ -335,7 +334,7 @@ def trackU(username, export=None, fmt="json"):
     if export:
         export_results(results, export, fmt)
 
-# === MENU & CLI ===
+
 
 def main_menu():
     while True:
