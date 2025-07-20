@@ -1,5 +1,8 @@
 <div align="center">
- <img src="https://github.com/MrEchoFi/MrEchoFi/raw/4274f537dec313ac7dde4403fe0fae24259beade/Mr.EchoFi-New-Logo-with-ASCII.jpg" alt="logo" width="200" height="auto" />
+ <img src="https://github.com/MrEchoFi/GRABBER/blob/master/Grabber_Tool_Functionality_Showcase_b687aca3-91c6-4d76-adc0-d9a503c42a21.jpg?raw=true" alt="logo" width="600" height="auto" />
+</div>
+<div align="center">
+ <img src="https://github.com/MrEchoFi/MrEchoFi/raw/4274f537dec313ac7dde4403fe0fae24259beade/Mr.EchoFi-New-Logo-with-ASCII.jpg" alt="logo" width="235" height="auto" />
   <h1>~ GRABBER ~</h1>
    
   <p>
@@ -9,7 +12,7 @@
 
   📫 How to reach me **http://mrechofi.github.io/Tanjib_portfolio_website/** &
  **tanjibisham777@gmail.com & tanjibisham888@gmail.com**
-
+</div>
 # Video for better understanding :
   
 
